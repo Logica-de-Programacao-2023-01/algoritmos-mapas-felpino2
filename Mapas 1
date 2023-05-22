@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	x := "Nada além de flores e flores"
+	fmt.Println(mapa(x))
+}
+
+func mapa(x string) map[string]int {
+	palavras := strings.Fields(x)
+	numerodepalavras := make(map[string]int)
+	for _, palavra := range palavras {
+		numerodepalavras[palavra]++
+	}
+	return numerodepalavras
+}
