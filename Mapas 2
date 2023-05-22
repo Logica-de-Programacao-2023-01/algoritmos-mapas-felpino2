@@ -1,0 +1,29 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	m1 := map[string]int{
+		"ursos":    2,
+		"pinguins": 4,
+	}
+	m2 := map[string]int{
+		"pinguins": 3,
+	}
+
+	fmt.Println(mapa(m1, m2))
+}
+
+func mapa(m1 map[string]int, m2 map[string]int) map[string]int {
+	m3 := make(map[string]int)
+	for chave, ran := range m1 {
+		m3[chave] = ran
+	}
+	for chave, ran := range m2 {
+		m3[chave] = ran
+	}
+
+	return m3
+}
