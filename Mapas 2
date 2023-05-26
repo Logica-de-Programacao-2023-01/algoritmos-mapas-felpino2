@@ -27,3 +27,30 @@ func mapa(m1 map[string]int, m2 map[string]int) map[string]int {
 
 	return m3
 }
+////////////////////////////////////////////OU////////////////////////
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	m1 := map[string]int{
+		"ursos":    2,
+		"pinguins": 4,
+	}
+	m2 := map[string]int{
+		"pinguins": 3,
+	}
+
+	fmt.Println(mapa(m1, m2))
+}
+
+func mapa(m1 map[string]int, m2 map[string]int) map[string]int {
+
+	for x, y := range m2 {
+		m1[x] = y
+	}
+
+	return m1
+}
